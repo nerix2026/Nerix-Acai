@@ -1,0 +1,31 @@
+[build]
+  publish = "."
+  functions = "netlify/functions"
+
+[[redirects]]
+  from = "/api/criar-pix"
+  to = "/.netlify/functions/criar-pix"
+  status = 200
+
+[[redirects]]
+  from = "/api/status-pix"
+  to = "/.netlify/functions/status-pix"
+  status = 200
+
+[[redirects]]
+  from = "/api/criar-cartao"
+  to = "/.netlify/functions/criar-cartao"
+  status = 200
+
+[functions]
+  external_node_modules = ["firebase-admin"]
+
+[[redirects]]
+  from = "/api/mp-webhook"
+  to = "/.netlify/functions/mp-webhook"
+  status = 200
+
+[[redirects]]
+  from = "/api/meta-admin"
+  to = "/.netlify/functions/meta-admin"
+  status = 200
